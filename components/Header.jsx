@@ -11,7 +11,7 @@ const Header = () => {
   const toggleMenu = () => setDisplayMenu(!displayMenu);
 
   return (
-    <header className='flex h-[10vh] max-w-screen-xl mx-auto items-center bg-[#E3FDFD] py-4'>
+    <header className='flex h-[10vh] max-w-screen-xl mx-auto items-center bg-[#E3FDFD] my-4'>
       <div className='flex h-16 w-full justify-between'>
         {/* app logo */}
         <Link

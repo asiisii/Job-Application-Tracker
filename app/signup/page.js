@@ -1,15 +1,7 @@
 'use client';
 import { useState } from 'react';
 import Image from 'next/image';
-import {
-  signup,
-  bgSignUpDark,
-  bgSignUpLight,
-  signUpDarkImg,
-  signUpLightImg,
-  bgSignUp,
-  heroSignUp,
-} from '@/public/assets/images/index.js';
+import { signup, bgSignUp, heroSignUp } from '@/public/assets/images/index.js';
 
 const SignUpPage = () => {
   const [showPassword, setShowPassword] = useState(false);
@@ -46,14 +38,14 @@ const SignUpPage = () => {
   };
   //   bg-[#CBF1F5]
   return (
-    <div className='mx-auto h-[85vh] max-w-screen-xl mb-10'>
+    <div className='mx-auto mb-10 h-[85vh] max-w-screen-xl'>
       <div className='flex h-1/4 flex-col md:flex md:justify-center'>
         <h1 className=' w-full py-5 text-center text-3xl sm:text-4xl'>
           Take the first stride,
           <span className='text-blue-500'> Sign Up</span> and let your potential
           collide!
         </h1>
-        <h1 className=' m-auto mb-5 hidden w-[80%] items-center justify-center py-4 text-center text-gray-400 md:flex'>
+        <h1 className=' m-auto mb-5 hidden w-[80%] items-center justify-center text-center text-gray-400 md:flex'>
           {/* Invalid email or password. Please check your credentials and try again. */}
           Track all your job applications effortlessly with our Job Hunt app.
           Stay organized, never miss a deadline, and simplify your job hunt.
@@ -61,14 +53,13 @@ const SignUpPage = () => {
         </h1>
       </div>
 
-      <div className='flex w-full h-full flex-col  bg-[#CBF1F5] sm:flex-row'>
-        {/* <div className=' w-2/5 bg-red-500'></div> */}
-        <form className='flex w-full flex-col justify-center p-5 md:w-[45%]' >
+      <div className='flex h-[75%] w-full flex-col bg-[#CBF1F5] sm:flex-row md:rounded-[50px]'>
+        <form className='flex h-full w-full flex-col justify-center px-7  md:w-[45%]'>
           <div className='relative mb-4'>
             <input
               required
               type='text'
-              className='w-full border-b-2 border-gray-500 bg-transparent px-2 py-3 text-base outline-none focus:border-[#A88BFA]'
+              className='w-full border-b-2 border-gray-500 bg-transparent px-2 py-3 text-[10px] outline-none focus:border-[#A88BFA]'
               onFocus={() => handleFocus('name')}
               onBlur={handleBlur}
               onChange={(event) => handleChange(event, 'name')}
@@ -91,16 +82,16 @@ const SignUpPage = () => {
             >
               Name
             </label>
-            <p className='mt-2 text-sm text-green-600 '>
+            {/* <p className='mt-2 text-sm text-green-600 '>
               Great! The name is available.
-            </p>
+            </p> */}
           </div>
           {/* email */}
           <div className='relative mb-4'>
             <input
               required
               type='email'
-              className='w-full border-b-2 border-gray-500 bg-transparent px-2 py-3 text-base outline-none focus:border-[#A88BFA]'
+              className='w-full border-b-2 border-gray-500 bg-transparent px-2 py-3 text-[10px] outline-none focus:border-[#A88BFA]'
               onFocus={() => handleFocus('email')}
               onBlur={handleBlur}
               onChange={(event) => handleChange(event, 'email')}
@@ -135,7 +126,7 @@ const SignUpPage = () => {
             <input
               required
               type={showPassword ? 'text' : 'password'}
-              className='w-full border-b-2 border-gray-500 bg-transparent px-2 py-3 text-base outline-none focus:border-[#A88BFA]'
+              className='w-full border-b-2 border-gray-500 bg-transparent px-2 py-3 text-[10px] outline-none focus:border-[#A88BFA]'
               onFocus={() => handleFocus('password')}
               onBlur={handleBlur}
               onChange={(event) => handleChange(event, 'password')}
@@ -167,17 +158,17 @@ const SignUpPage = () => {
             >
               Password
             </label>
-            <p className='mt-2 text-sm text-red-600 '>
+            {/* <p className='mt-2 text-sm text-red-600 '>
               <span className='font-medium'>Oh, snapp!</span> Some error
               message.
-            </p>
+            </p> */}
           </div>
           {/* confirm password */}
           <div className='relative mb-4'>
             <input
               required
               type={showConfirmPassword ? 'text' : 'password'}
-              className='w-full border-b-2 border-gray-500 bg-transparent px-2 py-3 text-base outline-none focus:border-[#A88BFA]'
+              className='text-10px w-full border-b-2 border-gray-500 bg-transparent px-2 py-3 outline-none focus:border-[#A88BFA]'
               onFocus={() => handleFocus('confirmPassword')}
               onBlur={handleBlur}
               onChange={(event) => handleChange(event, 'confirmPassword')}
@@ -222,10 +213,10 @@ const SignUpPage = () => {
         </form>
 
         <div
-          className='hidden w-0 bg-cover bg-center bg-no-repeat md:flex md:justify-end md:w-[55%] '
+          className='hidden h-full w-0 rounded-br-[50px] rounded-tr-[50px] bg-cover bg-center bg-no-repeat md:flex md:w-[55%] md:justify-end'
           style={{ backgroundImage: `url(${bgSignUp.src})` }}
         >
-          <Image src={heroSignUp} alt='sign up' className='w-3/4 max-h-fit' />
+          <Image src={heroSignUp} alt='sign up' className='h-[90%] w-3/4 ' />
         </div>
       </div>
     </div>
