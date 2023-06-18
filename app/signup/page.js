@@ -90,7 +90,7 @@ const SignUpPage = () => {
             </p> */}
           </div>
           {/* email */}
-          <div className='relative my-4 mt-8'>
+          <div className='relative mb-4'>
             <input
               required
               type='email'
@@ -202,7 +202,7 @@ const SignUpPage = () => {
               Passwords do not match. Please make sure the passwords match.
             </p>
           </div>
-          <button className='hover:bg=[#1F2937] btn items-center bg-[#A88BFA] text-[#1F2937] hover:text-white '>
+          <button className='hover:bg=[#1F2937] btn items-center bg-[#032A30] text-[#E3FDFD] hover:text-[#E3FDFD] '>
             Sign Up
           </button>
         </form>

@@ -125,7 +125,7 @@ const SignInPage = () => {
             </p> */}
           </div>
 
-          <button className='hover:bg=[#1F2937] btn items-center bg-[#032A30] text-white hover:text-white '>
+          <button className='hover:bg=[#1F2937] btn items-center bg-[#032A30] text-[#E3FDFD] hover:text-[#E3FDFD] '>
             Sign In
           </button>
         </form>
