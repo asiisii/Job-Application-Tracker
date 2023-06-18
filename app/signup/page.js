@@ -42,7 +42,7 @@ const SignUpPage = () => {
       <div className='flex h-1/4 flex-col md:flex md:justify-center'>
         <h1 className=' w-full py-5 text-center text-3xl sm:text-4xl'>
           Take the first stride,
-          <span className='text-blue-500'> Sign Up</span> and let your potential
+          <span className='text-[#71C9CE] font-extrabold'> Sign Up</span> and let your potential
           collide!
         </h1>
         <h1 className=' m-auto mb-5 hidden w-[80%] items-center justify-center text-center text-gray-400 md:flex'>
@@ -53,7 +53,7 @@ const SignUpPage = () => {
         </h1>
       </div>
 
-      <div className='flex h-[75%] w-full flex-col bg-[#CBF1F5] sm:flex-row md:rounded-[50px]'>
+      <div className='flex h-[75%] w-full flex-col bg-[#71C9CE] sm:flex-row md:rounded-[50px]'>
         <form className='flex h-full w-full flex-col justify-center px-7  md:w-[45%]'>
           <div className='relative mb-4'>
             <input

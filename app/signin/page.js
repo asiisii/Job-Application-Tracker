@@ -36,11 +36,12 @@ const SignInPage = () => {
   return (
     <div className='mx-auto mb-10 h-[85vh] max-w-screen-xl'>
       <div className='flex h-1/4 flex-col md:flex md:justify-center'>
-        <h1 className=' w-full py-5 text-center text-3xl sm:text-4xl'>
+        <h1 className=' w-full py-5 text-center text-3xl text-[#E3FDFD] sm:text-4xl'>
           Pass through the gate,{' '}
-          <span className='text-blue-500'> to a future</span> that's great!
+          <span className='font-extrabold text-[#71C9CE]'> to a future</span>{' '}
+          that's great!
         </h1>
-        <h1 className=' m-auto mb-5 hidden w-[80%] items-center justify-center text-center text-gray-400 md:flex'>
+        <h1 className=' m-auto mb-5 hidden w-[80%] items-center justify-center text-center text-[#E3FDFD] md:flex'>
           {/* Invalid email or password. Please check your credentials and try again. */}
           Stay organized, never miss a deadline, and streamline your job search
           process with our Job Hunt app. Sign in to access your personalized
@@ -52,14 +53,14 @@ const SignInPage = () => {
         </h1> */}
       </div>
 
-      <div className='flex h-[75%] w-full flex-col bg-[#CBF1F5] sm:flex-row-reverse md:rounded-[50px]'>
-        <form className='flex h-full w-full flex-col justify-center px-7  md:w-[45%]'>
+      <div className='flex h-[75%] w-full flex-col bg-[#71C9CE] sm:flex-row-reverse md:rounded-[50px]'>
+        <form className='flex h-full w-full flex-col justify-center px-7 md:w-[45%]'>
           {/* email */}
           <div className='relative my-4 mt-8'>
             <input
               required
               type='email'
-              className='w-full border-b-2 border-gray-500 bg-transparent px-2 py-3 text-[10px] outline-none focus:border-[#A88BFA]'
+              className='w-full border-b-2 border-gray-500 bg-transparent px-2 py-3 text-[10px] outline-none focus:border-[#032A30]'
               onFocus={() => handleFocus('email')}
               onBlur={handleBlur}
               onChange={(event) => handleChange(event, 'email')}
@@ -77,8 +78,8 @@ const SignInPage = () => {
                     : '18px',
                 color:
                   focusedField === 'email' || inputValues.email
-                    ? '#A88BFA'
-                    : '#999',
+                    ? '#orange'
+                    : 'red',
               }}
               className='pointer-events-none absolute left-2 transition-all'
             >
@@ -90,7 +91,7 @@ const SignInPage = () => {
             <input
               required
               type={showPassword ? 'text' : 'password'}
-              className='w-full border-b-2 border-gray-500 bg-transparent px-2 py-3 text-[10px] outline-none focus:border-[#A88BFA]'
+              className='w-full border-b-2 border-gray-500 bg-transparent px-2 py-3 text-[10px] outline-none focus:border-[#032A30]'
               onFocus={() => handleFocus('password')}
               onBlur={handleBlur}
               onChange={(event) => handleChange(event, 'password')}
@@ -99,7 +100,7 @@ const SignInPage = () => {
             <button
               type='button'
               onClick={() => togglePasswordVisibility('password')}
-              className='absolute right-0 top-0 mr-2 mt-2 text-sm text-white focus:outline-none'
+              className='absolute right-0 top-0 mr-2 mt-2 text-sm text-[#E3FDFD] focus:outline-none'
             >
               {showPassword ? 'Hide' : 'Show'}
             </button>
@@ -115,8 +116,8 @@ const SignInPage = () => {
                     : '18px',
                 color:
                   focusedField === 'password' || inputValues.password
-                    ? '#A88BFA'
-                    : '#999',
+                    ? '#032A30'
+                    : '#043A43',
               }}
               className='pointer-events-none absolute left-2 transition-all'
             >
@@ -128,7 +129,7 @@ const SignInPage = () => {
             </p> */}
           </div>
 
-          <button className='hover:bg=[#1F2937] btn items-center bg-[#A88BFA] text-[#1F2937] hover:text-white '>
+          <button className='hover:bg=[#1F2937] btn items-center bg-[#032A30] text-white hover:text-white '>
             Sign In
           </button>
         </form>
@@ -136,7 +137,11 @@ const SignInPage = () => {
           className='hidden h-full w-0 rounded-bl-[50px] rounded-tl-[50px] bg-cover bg-center bg-no-repeat md:flex md:w-[55%] md:justify-center'
           style={{ backgroundImage: `url(${bgSignIn.src})` }}
         >
-          <Image src={heroSignIn} alt='sign in' className='h-[80%] w-3/4  pt-10' />
+          <Image
+            src={heroSignIn}
+            alt='sign in'
+            className='h-[80%] w-3/4  pt-10'
+          />
         </div>
       </div>
     </div>
