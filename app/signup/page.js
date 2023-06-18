@@ -36,16 +36,19 @@ const SignUpPage = () => {
       [field]: event.target.value,
     }));
   };
-  //   bg-[#CBF1F5]
+
   return (
     <div className='mx-auto mb-10 h-[85vh] max-w-screen-xl'>
       <div className='flex h-1/4 flex-col md:flex md:justify-center'>
-        <h1 className=' w-full py-5 text-center text-3xl sm:text-4xl'>
+        <h1 className=' w-full py-5 text-center text-3xl text-[#E3FDFD] sm:text-4xl '>
           Take the first stride,
-          <span className='text-[#71C9CE] font-extrabold'> Sign Up</span> and let your potential
-          collide!
+          <span className='font-extrabold text-[#71C9CE]'> Sign Up</span> and
+          let your potential collide!
         </h1>
-        <h1 className=' m-auto mb-5 hidden w-[80%] items-center justify-center text-center text-gray-400 md:flex'>
+        <h1
+          className=' m-auto mb-5 hidden w-[80%] items-center justify-center text-center text-[#E3FDFD]
+        md:flex'
+        >
           {/* Invalid email or password. Please check your credentials and try again. */}
           Track all your job applications effortlessly with our Job Hunt app.
           Stay organized, never miss a deadline, and simplify your job hunt.
@@ -59,7 +62,7 @@ const SignUpPage = () => {
             <input
               required
               type='text'
-              className='w-full border-b-2 border-gray-500 bg-transparent px-2 py-3 text-[10px] outline-none focus:border-[#A88BFA]'
+              className='w-full border-b-2 border-gray-500 bg-transparent px-2 py-3 text-[18px] text-[#E3FDFD] outline-none focus:border-[#032A30]'
               onFocus={() => handleFocus('name')}
               onBlur={handleBlur}
               onChange={(event) => handleChange(event, 'name')}
@@ -73,12 +76,12 @@ const SignUpPage = () => {
                     : '10px',
                 fontSize:
                   focusedField === 'name' || inputValues.name ? '14px' : '18px',
-                color:
-                  focusedField === 'name' || inputValues.name
-                    ? '#A88BFA'
-                    : '#999',
+                // color:
+                //   focusedField === 'name' || inputValues.name
+                //     ? '#A88BFA'
+                //     : '#999',
               }}
-              className='pointer-events-none absolute left-2 transition-all'
+              className='pointer-events-none absolute left-2 text-[#043A43] transition-all'
             >
               Name
             </label>
@@ -87,11 +90,11 @@ const SignUpPage = () => {
             </p> */}
           </div>
           {/* email */}
-          <div className='relative mb-4'>
+          <div className='relative my-4 mt-8'>
             <input
               required
               type='email'
-              className='w-full border-b-2 border-gray-500 bg-transparent px-2 py-3 text-[10px] outline-none focus:border-[#A88BFA]'
+              className='w-full border-b-2 border-gray-500 bg-transparent px-2 py-3 text-[18px] text-white outline-none focus:border-[#032A30]'
               onFocus={() => handleFocus('email')}
               onBlur={handleBlur}
               onChange={(event) => handleChange(event, 'email')}
@@ -107,26 +110,18 @@ const SignUpPage = () => {
                   focusedField === 'email' || inputValues.email
                     ? '14px'
                     : '18px',
-                color:
-                  focusedField === 'email' || inputValues.email
-                    ? '#A88BFA'
-                    : '#999',
               }}
-              className='pointer-events-none absolute left-2 transition-all'
+              className='pointer-events-none absolute left-2 text-[#043A43] transition-all'
             >
               Email
             </label>
-            <p className='mt-2 text-sm text-red-600 '>
-              This email is already registered. Please use a different email or
-              login.
-            </p>
           </div>
           {/* password */}
           <div className='relative mb-4'>
             <input
               required
               type={showPassword ? 'text' : 'password'}
-              className='w-full border-b-2 border-gray-500 bg-transparent px-2 py-3 text-[10px] outline-none focus:border-[#A88BFA]'
+              className='w-full border-b-2 border-gray-500 bg-transparent px-2 py-3 text-[18px] text-[#E3FDFD] outline-none focus:border-[#032A30]'
               onFocus={() => handleFocus('password')}
               onBlur={handleBlur}
               onChange={(event) => handleChange(event, 'password')}
@@ -135,7 +130,7 @@ const SignUpPage = () => {
             <button
               type='button'
               onClick={() => togglePasswordVisibility('password')}
-              className='absolute right-0 top-0 mr-2 mt-2 text-sm text-white focus:outline-none'
+              className='absolute right-0 top-0 mr-2 mt-2 text-sm text-[#E3FDFD] focus:outline-none'
             >
               {showPassword ? 'Hide' : 'Show'}
             </button>
@@ -151,8 +146,8 @@ const SignUpPage = () => {
                     : '18px',
                 color:
                   focusedField === 'password' || inputValues.password
-                    ? '#A88BFA'
-                    : '#999',
+                    ? '#032A30'
+                    : '#043A43',
               }}
               className='pointer-events-none absolute left-2 transition-all'
             >
@@ -168,7 +163,7 @@ const SignUpPage = () => {
             <input
               required
               type={showConfirmPassword ? 'text' : 'password'}
-              className='text-10px w-full border-b-2 border-gray-500 bg-transparent px-2 py-3 outline-none focus:border-[#A88BFA]'
+              className='w-full border-b-2 border-gray-500 bg-transparent px-2 py-3 text-[18px] text-[#E3FDFD]  outline-none focus:border-[#032A30]'
               onFocus={() => handleFocus('confirmPassword')}
               onBlur={handleBlur}
               onChange={(event) => handleChange(event, 'confirmPassword')}
@@ -177,7 +172,7 @@ const SignUpPage = () => {
             <button
               type='button'
               onClick={() => togglePasswordVisibility('confirmPassword')}
-              className='absolute right-0 top-0 mr-2 mt-2 text-sm text-white focus:outline-none'
+              className='absolute right-0 top-0 mr-2 mt-2 text-sm text-[#E3FDFD] focus:outline-none'
             >
               {showConfirmPassword ? 'Hide' : 'Show'}
             </button>
@@ -196,8 +191,8 @@ const SignUpPage = () => {
                 color:
                   focusedField === 'confirmPassword' ||
                   inputValues.confirmPassword
-                    ? '#A88BFA'
-                    : '#999',
+                    ? '#032A30'
+                    : '#043A43',
               }}
               className='pointer-events-none absolute left-2 transition-all'
             >

@@ -60,7 +60,7 @@ const SignInPage = () => {
             <input
               required
               type='email'
-              className='w-full border-b-2 border-gray-500 bg-transparent px-2 py-3 text-[18px] outline-none focus:border-[#032A30] text-white'
+              className='w-full border-b-2 border-gray-500 bg-transparent px-2 py-3 text-[18px] text-[#E3FDFD] outline-none focus:border-[#032A30]'
               onFocus={() => handleFocus('email')}
               onBlur={handleBlur}
               onChange={(event) => handleChange(event, 'email')}
@@ -77,7 +77,7 @@ const SignInPage = () => {
                     ? '14px'
                     : '18px',
               }}
-              className='pointer-events-none absolute left-2 transition-all text-[#043A43]'
+              className='pointer-events-none absolute left-2 text-[#043A43] transition-all'
             >
               Email
             </label>
@@ -87,7 +87,7 @@ const SignInPage = () => {
             <input
               required
               type={showPassword ? 'text' : 'password'}
-              className='w-full border-b-2 border-gray-500 bg-transparent px-2 py-3 text-[18px] outline-none focus:border-[#032A30] text-white'
+              className='w-full border-b-2 border-gray-500 bg-transparent px-2 py-3 text-[18px] text-[#E3FDFD] outline-none focus:border-[#032A30]'
               onFocus={() => handleFocus('password')}
               onBlur={handleBlur}
               onChange={(event) => handleChange(event, 'password')}
