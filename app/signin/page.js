@@ -2,6 +2,7 @@
 import { useState } from 'react';
 import Image from 'next/image';
 import { signin, heroSignIn, bgSignIn } from '@/public/assets/images/index.js';
+import Link from 'next/link';
 
 const SignInPage = () => {
   const [showPassword, setShowPassword] = useState(false);
@@ -128,6 +129,14 @@ const SignInPage = () => {
           <button className='hover:bg=[#1F2937] btn items-center bg-[#032A30] text-[#E3FDFD] hover:text-[#E3FDFD] '>
             Sign In
           </button>
+          <p className='mt-2 text-sm text-[#E3FDFD] text-center'>
+            Don&apos;t have an account? &nbsp;
+            <span className='font-medium text-blue-600 underline'>
+              <Link href='/signup' as='/signup'>
+                Sign Up
+              </Link>
+            </span>
+          </p>
         </form>
         <div
           className='hidden h-full w-0 rounded-bl-[50px] rounded-tl-[50px] bg-cover bg-center bg-no-repeat md:flex md:w-[55%] md:justify-center'
