@@ -42,7 +42,7 @@ const Header = () => {
         </Link>
         <div className='hidden flex-shrink-0 items-center sm:flex'>
           <button
-            className='self-center rounded px-8 py-3 text-white'
+            className='self-center rounded px-8 py-3 text-[#E3FDFD]'
             onClick={() => {
               toggleMenu();
               router.push('/signin');
@@ -86,7 +86,7 @@ const Header = () => {
         }`}
       >
         <div className='flex h-screen flex-col justify-center px-8 '>
-          <button className='absolute right-10 top-10' onClick={toggleMenu}>
+          <button className='absolute right-10 top-6' onClick={toggleMenu}>
             <svg
               xmlns='http://www.w3.org/2000/svg'
               fill='none'
