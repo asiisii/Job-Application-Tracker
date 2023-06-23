@@ -40,7 +40,7 @@ const SignInPage = () => {
         <h1 className=' w-full py-5 text-center text-3xl text-[#E3FDFD] sm:text-4xl'>
           Pass through the gate,{' '}
           <span className='font-extrabold text-[#71C9CE]'> to a future</span>{' '}
-          that's great!
+          that&apos;s great!
         </h1>
         <h1 className=' m-auto mb-5 hidden w-[80%] items-center justify-center text-center text-[#E3FDFD] md:flex'>
           {/* Invalid email or password. Please check your credentials and try again. */}
